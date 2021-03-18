@@ -10,8 +10,9 @@
 
 <body class="test_style">
 <div class="my_div">
-    <form id="my_image_form", method="POST", enctype="multipart/form-data">
-    {% csrf_token %}
+    <form id="my_image_form", method="POST">
+        {% csrf_token %}
+        {{ form }}
     <input id="image_input" name="image_input" type="file">
     <label>
             Добавьте имя файлу

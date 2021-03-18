@@ -18,7 +18,10 @@ from django.urls import path
 
 from .views import MyView
 
+from django.conf.urls.static import static
+
+from django.conf import settings
 urlpatterns = [
     path('test_url/', MyView.as_view())
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
