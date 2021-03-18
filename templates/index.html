@@ -1,0 +1,25 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet", href="{% static 'style.css' %}">
+</head>
+
+<body class="test_style">
+<div class="my_div">
+    <form id="my_image_form", method="POST", enctype="multipart/form-data">
+    {% csrf_token %}
+    <input id="image_input" name="image_input" type="file">
+    <label>
+            Добавьте имя файлу
+            <input id="image_name" name="image_name" type="text">
+    </label>
+</form>
+    <button form="my_image_form">Отправить данные</button>
+</div>
+
+</body>
+</html>

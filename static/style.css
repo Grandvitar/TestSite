@@ -1,0 +1,9 @@
+.test_style {
+    background-color: #5897fb;
+}
+
+.my_div {
+    margin-left: 50%;
+    margin-top: 20%;
+    transform: translate(-50%, -50%);
+}
